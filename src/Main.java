@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Circle circle = new Circle(1);
@@ -8,6 +11,15 @@ public class Main {
 
         Square square = new Square(2);
         System.out.println(square);
+
+        List<Shape> list = new ArrayList<>();
+        list.add(rectangle);
+        list.add(circle);
+        list.add(square);
+
+        System.out.println(list);
+
+
 
     }
 }

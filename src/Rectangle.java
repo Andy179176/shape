@@ -1,4 +1,4 @@
-public class Rectangle {
+public class Rectangle extends Shape{
     private double sideA;
     private double sideB;
 
@@ -20,6 +20,7 @@ public class Rectangle {
         return String.format("Прямоугольник [%.2f x %.2f], площадь: %.2f",sideA,sideB,calcArea());
     }
 
+    @Override
     public double calcArea() {
         return sideA*sideB;
     }
