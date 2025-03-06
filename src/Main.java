@@ -5,6 +5,10 @@ public class Main {
 
         Rectangle rectangle = new Rectangle(3,4);
         System.out.println(rectangle);
+
+        Square square = new Square(2);
+        System.out.println(square);
+
     }
 }
 
