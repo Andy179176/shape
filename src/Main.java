@@ -18,8 +18,10 @@ public class Main {
         list.add(square);
 
         System.out.println(list);
-        System.out.printf("Общая площадь всех фигур: %.2f", calcAllShapesArea(list));
+        System.out.printf("Общая площадь всех фигур: %.2f%n", calcAllShapesArea(list));
 
+        System.out.println("Ищем фигуру:");
+        System.out.println(contains(list, new Circle(1)));
     }
 
     public static double calcAllShapesArea(List<Shape> list){
@@ -37,6 +39,10 @@ public class Main {
         }
 
         return result;
+    }
+
+    public static boolean contains(List<Shape> list,Shape shape){
+        return list.contains(shape);
     }
 
 
