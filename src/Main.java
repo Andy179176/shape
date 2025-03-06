@@ -22,6 +22,8 @@ public class Main {
 
         System.out.println("Ищем фигуру:");
         System.out.println(contains(list, new Circle(1)));
+        System.out.println("--------------------------");
+        System.out.println(areaBiggerThan(list,3.5));
     }
 
     public static double calcAllShapesArea(List<Shape> list){
@@ -42,10 +44,24 @@ public class Main {
     }
 
     public static boolean contains(List<Shape> list,Shape shape){
-        return list.contains(shape);
+        //return list.contains(shape);
+        for (Shape sh: list){
+            if(sh.equals(shape)){
+                return true;
+            }
+        }
+        return false;
     }
 
-
+    public static List<Shape> areaBiggerThan(List<Shape> list,double area){
+        List<Shape> result = new ArrayList<>();
+        for (Shape sh: list){
+            if(sh.calcArea()>area){
+                result.add(sh);
+            }
+        }
+        return result;
+    }
 
 
 
