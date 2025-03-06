@@ -2,6 +2,9 @@ public class Main {
     public static void main(String[] args) {
         Circle circle = new Circle(1);
         System.out.println(circle);
+
+        Rectangle rectangle = new Rectangle(3,4);
+        System.out.println(rectangle);
     }
 }
 
