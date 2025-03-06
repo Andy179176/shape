@@ -18,10 +18,32 @@ public class Main {
         list.add(square);
 
         System.out.println(list);
-
-
+        System.out.printf("Общая площадь всех фигур: %.2f", calcAllShapesArea(list));
 
     }
+
+    public static double calcAllShapesArea(List<Shape> list){
+        double result=0;
+        /*
+        for (int i=0; i< list.size(); i++){
+            Shape shape = list.get(i);
+            result+=shape.calcArea();
+        }
+
+         */
+        //   переменная-элемент: имя структуры
+        for (Shape shape: list){
+            result+=shape.calcArea();
+        }
+
+        return result;
+    }
+
+
+
+
+
+
 }
 
 /*
